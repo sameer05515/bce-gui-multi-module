@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.6.RELEASE</version>
-        <relativePath /> <!-- lookup parent from repository -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -17,30 +17,18 @@
     <version>1.0</version>
 
     <properties>
-        <!-- https://maven.apache.org/general.html#encoding-warning -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>5.3.1</junit.version>
-<!--        <spring.version>5.1.0.RELEASE</spring.version>-->
     </properties>
 
     <modules>
         <module>bce-gui</module>
         <module>Exporter</module>
-<!--        <module>password-sha</module>-->
-<!--        <module>password-md5</module>-->
     </modules>
 
     <dependencies>
-
-        <!-- Spring DI for all modules -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework</groupId>-->
-<!--            <artifactId>spring-context</artifactId>-->
-<!--            <version>${spring.version}</version>-->
-<!--        </dependency>-->
-
         <!-- unit test -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -54,7 +42,6 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>

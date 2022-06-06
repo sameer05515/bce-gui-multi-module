@@ -78,7 +78,7 @@
 
 
 
-            <div id="resultsDisplay" ng-if="errorMessage.length>0">
+            <div id="resultsDisplay1" ng-if="errorMessage.length>0">
 
                 <div ng-if="(loadingMessage.length<=0) && (fileNames.length>0)">
                     Loading Complete
@@ -184,7 +184,7 @@
                                     <!-- <a href="{{file.filePath}}">
 											{{file.name}}
 										</a> -->
-                                    <a data-ng-model="testAnchor[this]" data-ng-click="ppp('http://127.0.0.1:8080/FileService/my.jsp?documentId='+file.filePath,file.filePath,$index,file)">
+                                    <a data-ng-model="testAnchor[this]" data-ng-click="ppp('/bce-gui/JSP/FileService/my.jsp?documentId='+file.filePath,file.filePath,$index,file)">
                                         [{{$index + 1}}]
 
                                         <!-- <span class="loadMessage">

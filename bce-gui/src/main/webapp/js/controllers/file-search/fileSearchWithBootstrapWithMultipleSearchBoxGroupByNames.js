@@ -68,10 +68,14 @@ angular
 
             $scope.choices = [{
                     id: "choice1",
-                    name: "D:/Prem/tutorials"
+                    name: "C:/Prem"
                 },
                 { id: "choice2", name: "/home/premendra/Desktop" },
-                { id: "choice3", name: "/home/premendra/git" }
+                { id: "choice3", name: "/home/premendra/git" },
+                {
+                    id: "choice4",
+                    name: "D:/Prem/tutorials"
+                }
             ];
 
             $scope.addNewChoice = function() {
@@ -119,7 +123,7 @@ angular
             $scope.moveFile = function(fileKaPath, nayaFilePath, nayaMovingFileName) {
 
                 if (confirm("Are you sure you want to move File?" + fileKaPath + " \n to new path ? " + nayaFilePath)) {
-                    var urrrlll = "http://127.0.0.1:8080/FileService/fileMove.jsp";
+                    var urrrlll = "/bce-gui/JSP/FileService/fileMove.jsp";
                     $http({
                             method: "POST",
                             url: urrrlll,
@@ -176,7 +180,7 @@ angular
             $scope.renameFile = function(fileKaPath, nayaFileName) {
 
                 if (confirm("Are you sure you want to Rename Files?" + fileKaPath)) {
-                    var urrrlll = "http://127.0.0.1:8080/FileService/fileRename.jsp";
+                    var urrrlll = "/bce-gui/JSP/FileService/fileRename.jsp";
                     $http({
                             method: "POST",
                             url: urrrlll,
@@ -214,7 +218,7 @@ angular
             $scope.deleteFile = function(fileKaPath) {
                 //alert(fileKaPath+"");
                 if (confirm("Are you sure you want to Delete Files?" + fileKaPath)) {
-                    var urrrlll = "http://127.0.0.1:8080/FileService/fileDelete.jsp";
+                    var urrrlll = "/bce-gui/JSP/FileService/fileDelete.jsp";
                     $http({
                             method: "POST",
                             url: urrrlll,
@@ -343,7 +347,7 @@ angular
                 $scope.errorMessage.push(obj);
                 console.log("Starting search for : " + myfolder);
                 //var urrrlll="http://127.0.0.1:8080/FileService/fileService.jsp?fileName="+myfolder+"";
-                var urrrlll = "http://127.0.0.1:8080/FileService/fileService.jsp";
+                var urrrlll = "/bce-gui/JSP/FileService/fileService.jsp";
                 $http({
                         method: "POST",
                         /* url : 'http://127.0.0.1:8080/FileService/fileService.jsp?fileName=C:/Users/796412/Desktop/21-dec-2015/07-june-2016/practical-probabilistic-programming/' */
@@ -517,7 +521,7 @@ angular
                 $scope.topic = $scope.filteredItems[$scope.counterrr];
                 $scope.selectedFileObject = $scope.topic;
                 $scope.ppp(
-                    "http://127.0.0.1:8080/FileService/my.jsp?documentId=" +
+                    "/bce-gui/JSP/FileService/my.jsp?documentId=" +
                     $scope.topic.filePath,
                     $scope.topic.filePath,
                     $scope.counterrr,
@@ -533,7 +537,7 @@ angular
                 $scope.topic = $scope.filteredItems[$scope.counterrr];
                 $scope.selectedFileObject = $scope.topic;
                 $scope.ppp(
-                    "http://127.0.0.1:8080/FileService/my.jsp?documentId=" +
+                    "/bce-gui/JSP/FileService/my.jsp?documentId=" +
                     $scope.topic.filePath,
                     $scope.topic.filePath,
                     $scope.counterrr,
